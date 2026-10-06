@@ -16,6 +16,7 @@ public class PlayerMovements : MonoBehaviour
     void Update()
     {
         //Debug.Log(Input.mousePosition);
+        //chuyen toa do tren screen (noi co mouse) chieu sang mat phang co player (ingame unity space)
 
         var worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         //Input.mousePosition: lay vi tri cua chuot tren screen (pixel)
