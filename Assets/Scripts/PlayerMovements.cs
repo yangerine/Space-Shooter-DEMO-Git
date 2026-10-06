@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerMovements : MonoBehaviour
 {
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,5 +25,8 @@ public class PlayerMovements : MonoBehaviour
         worldPoint.z = 0;
         transform.position = worldPoint;
         //gan toa do cho position cua gameObject dc gan cho script nay
+
     }
+
+  
 }

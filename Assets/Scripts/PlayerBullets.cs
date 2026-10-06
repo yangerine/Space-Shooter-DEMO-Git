@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerBullets : MonoBehaviour
 {
     [SerializeField] float speed;
+    public bool isDestroyed = false;
 
 
     // Start is called before the first frame update
@@ -24,5 +25,13 @@ public class PlayerBullets : MonoBehaviour
 
         //update gia tri toa do moi cho position?
         transform.position = new_position;
+
+        //if (new_position.y > 10f)
+        //{
+        //    Destroy(gameObject); //xoa GameObject khi bay qua 
+        //    isDestroyed = true;
+        //}
+
     }
+
 }
