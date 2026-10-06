@@ -26,9 +26,9 @@ public class PlayerBullets : MonoBehaviour
         //update gia tri toa do moi cho position?
         transform.position = new_position;
 
-        //if (new_position.y > 10f)
+        //if (transform.position.y > 100f )
         //{
-        //    Destroy(gameObject); //xoa GameObject khi bay qua 
+        //    Destroy(gameObject); //delete prefab's clone to prevent memory leaks
         //    isDestroyed = true;
         //}
 
