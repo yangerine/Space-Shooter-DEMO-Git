@@ -809,6 +809,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 1794998159}
+  shootingInterval: 0.3
 --- !u!1 &1794998159 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1044069373986525909, guid: 3ca37747da7258743a7e133207629bf9,

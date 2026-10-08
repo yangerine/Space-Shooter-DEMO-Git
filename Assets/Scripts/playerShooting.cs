@@ -20,13 +20,18 @@ public class playerShooting : MonoBehaviour
     {
         if (Input.GetMouseButton(0))
         {
-            if (Time.time - lastBulletTime > shootingInterval) //ktra xem tgian ban tiep theo co > 1s khong?
-            {
-                shoot();
-                lastBulletTime = Time.time; //reset timer
-            }
+            shooting_interval();
         }
 
+    }
+
+    private void shooting_interval()
+    {
+        if (Time.time - lastBulletTime > shootingInterval) //ktra xem tgian ban tiep theo co > 1s khong?
+        {
+            shoot();
+            lastBulletTime = Time.time; //reset timer
+        }
     }
 
     private void shoot()
