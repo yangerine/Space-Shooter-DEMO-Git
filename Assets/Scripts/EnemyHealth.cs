@@ -5,7 +5,19 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-    OnTriggerEnter2D 
+    public GameObject explosion_prefab;
+
+    //detects when a game object enters the enemy's collider
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        die();
+    }
+
+    private void die()
+    {
+        Destroy(gameObject);
+        Debug.Log("An Enemy was hit!");
+    }
 
     // Start is called before the first frame update
     void Start()
