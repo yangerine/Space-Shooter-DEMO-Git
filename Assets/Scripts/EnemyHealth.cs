@@ -13,21 +13,16 @@ public class EnemyHealth : MonoBehaviour
         die();
     }
 
+ 
     private void die()
     {
+        var explosion = Instantiate(explosion_prefab, transform.position, transform.rotation);
+        Destroy(explosion, 0.5f);
+        Debug.Log("Explosion!");
+
         Destroy(gameObject);
         Debug.Log("An Enemy was hit!");
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
