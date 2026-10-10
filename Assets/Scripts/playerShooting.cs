@@ -8,6 +8,7 @@ public class playerShooting : MonoBehaviour
     public GameObject bulletPrefab; //de class public de co the gan prefab vao script
     public float shootingInterval = 1f;
     private float lastBulletTime; //track the last time a bullet was fired
+    public Vector3 bullet_offset;
 
     // Start is called before the first frame update
     void Start()
@@ -36,7 +37,7 @@ public class playerShooting : MonoBehaviour
 
     private void shoot()
     {
-        var newBulletPrefab = Instantiate(bulletPrefab, transform.position, transform.rotation);
+        var newBulletPrefab = Instantiate(bulletPrefab, transform.position + bullet_offset, transform.rotation);
         Destroy(newBulletPrefab, 5f);
     }
 }

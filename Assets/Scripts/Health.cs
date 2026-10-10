@@ -15,7 +15,7 @@ public class Health : MonoBehaviour
     }
 
     //take_damage method nhan vao gia tri tham chieu damage
-    private void take_damage(int damage)
+    public void take_damage(int damage)
     {
         //if the HP = 0 from the start -> return
         if (health_point <= 0) 
