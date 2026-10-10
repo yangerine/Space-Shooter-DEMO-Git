@@ -5,8 +5,7 @@ using UnityEngine;
 public class PlayerBullets : MonoBehaviour
 {
     [SerializeField] float speed;
-    public bool isDestroyed = false;
-
+    [SerializeField] int damage;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +27,21 @@ public class PlayerBullets : MonoBehaviour
 
         //Destroy(gameObject,5f);
 
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        //check the object the bullet collides with has an EnemyHealth script attachted to it or not
+        var enemy = collision.GetComponent<EnemyHealth>();
+
+        //if enemy exist
+        if ( (enemy != null) )
+        {
+            enemy.take_damage(damage);
+        }
+
+        //destroy the bullet gameobject whether the object it pass through die or not
+        //Destroy(gameObject);
     }
 
 }
