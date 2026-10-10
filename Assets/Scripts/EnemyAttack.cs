@@ -13,7 +13,8 @@ public class EnemyAttack : MonoBehaviour
         //check xem collsion object co duoc gan script PlayerHealth hay khong
         var player_health = collision.GetComponent<PlayerHealth>();
 
-        if (player_health != null){
+        if (player_health != null)
+        {
             player_health.take_damage(damage);
             health.take_damage(1000);
             //because this is an enemy suicide attack
