@@ -1,15 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class EnemyHealth : Health
+public class PlayerHealth : Health
 {
     protected override void die()
     {
         base.die();
-        Debug.Log("An Enemy was hit!");
+        Debug.Log("The player was hit!");
     }
-
-
 }

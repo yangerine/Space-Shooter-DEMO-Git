@@ -945,6 +945,7 @@ GameObject:
   - component: {fileID: 1620213138}
   - component: {fileID: 1620213139}
   - component: {fileID: 1620213140}
+  - component: {fileID: 1620213143}
   - component: {fileID: 1620213142}
   - component: {fileID: 1620213141}
   m_Layer: 0
@@ -1011,7 +1012,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1892585311
   m_SortingLayer: 6
-  m_SortingOrder: 12
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f6d9e7337b90b9e4ba6d44379335a759, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1119,13 +1120,13 @@ PolygonCollider2D:
       - {x: 0.42400002, y: 0.28800002}
       - {x: 0.2, y: 0.35200003}
       - {x: 0.16000001, y: 0.33600003}
-      - {x: 0.096, y: 0.512}
-      - {x: 0.080000006, y: 0.60800004}
-      - {x: 0.032, y: 0.8}
-      - {x: 0.008, y: 0.82400006}
-      - {x: -0.016, y: 0.82400006}
-      - {x: -0.032, y: 0.79200006}
-      - {x: -0.136, y: 0.35200003}
+      - {x: 0.07886763, y: 0.41348866}
+      - {x: 0.041452166, y: 0.5180549}
+      - {x: 0.032, y: 0.54729736}
+      - {x: 0.029415468, y: 0.5969963}
+      - {x: -0.033132415, y: 0.5884301}
+      - {x: -0.049132377, y: 0.522165}
+      - {x: -0.06747054, y: 0.3263015}
       - {x: -0.2, y: 0.35200003}
       - {x: -0.42400002, y: 0.28800002}
       - {x: -0.448, y: 0.224}
@@ -1185,6 +1186,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1620213143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620213136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa40c66bddd5b644c87ce6bf1fc6deb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosion_prefab: {fileID: 1587261729604890, guid: 600ec83cba1cec448bf41a6607229741,
+    type: 3}
+  default_health_point: 3
 --- !u!1 &1650439224
 GameObject:
   m_ObjectHideFlags: 0
@@ -1372,13 +1388,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8850800978297846098, guid: 3ca37747da7258743a7e133207629bf9,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.46375
+      objectReference: {fileID: 0}
+    - target: {fileID: 8850800978297846098, guid: 3ca37747da7258743a7e133207629bf9,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.49375
+      objectReference: {fileID: 0}
+    - target: {fileID: 8850800978297846098, guid: 3ca37747da7258743a7e133207629bf9,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8850800978297846098, guid: 3ca37747da7258743a7e133207629bf9,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.08
+      value: -3.092
       objectReference: {fileID: 0}
     - target: {fileID: 8850800978297846098, guid: 3ca37747da7258743a7e133207629bf9,
         type: 3}

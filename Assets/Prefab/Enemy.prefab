@@ -161,5 +161,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b7ed39fef9aebd438cace87e0ac8aa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosion_prefab: {fileID: 2230181181638520717, guid: d1cea721e01aaa4468ca6460c3ba5d60,
+  explosion_prefab: {fileID: 1280240331523082, guid: 45ae5851ef2832044bba82850372d67b,
     type: 3}
+  default_health_point: 3
