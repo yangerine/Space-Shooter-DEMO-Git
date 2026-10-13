@@ -1,0 +1,29 @@
+start() la mot callback tu unity system call
+start() chi duoc goi 1 lan duy nhat
+-> khong nen viet code truc tiep vao cac ham message (unity message) ma nen tao cac ham
+-> chi ro cac y dinh trong cac ham message
+unity messange chi chay 1 lan duy nhat trong vong doi cua component duoc gan cung
+
+Update() - duoc goi moi frame 1 lan
+
+awake() - called when the script is loaded
+- khi script bi disable thi van load duoc
+
+------------------------
+
+//class: Debug
+co 3 method pho bien
+Debug.Log
+Debug.LogWarning
+Debug.LogError
+
+//Time:
+
+Time.time: tgian bat dau tu khi start game
+Time.deltatime: tgian giua 2 frame
+
+//Vector:
+dot product: so xem 2 vector dang co xu huong huong ve phia nao so voi nhau(cung chieu, vuong goc, nguoc chieu)
+cross product: lay 2 vector vaf timf ra vector 3 maf vuong goc voi 2 vector kia
+magnitude: tinh khoang cach tu vector hien tai den toa do 0(0,0,0)
+normalized: chuyen vector ve vector don vi x(1,0,0) - y(0,1,0) - z(0,0,1)
