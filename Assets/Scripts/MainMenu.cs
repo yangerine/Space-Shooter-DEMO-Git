@@ -7,6 +7,6 @@ public class MainMenu : MonoBehaviour
 {
     public void OnPlayButtonClicked()
     {
-        SceneManager.LoadScene("Battle");
+        SceneManager.LoadScene("BattleScene");
     }
 }
