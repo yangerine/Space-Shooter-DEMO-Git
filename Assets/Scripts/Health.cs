@@ -7,6 +7,7 @@ public class Health : MonoBehaviour
     public GameObject explosion_prefab;
     public int default_health_point;
     private int health_point;
+    public System.Action onDead; //dat ten bien cho su kien
     
 
     private void Start()
@@ -40,5 +41,11 @@ public class Health : MonoBehaviour
         Debug.Log("Explosion!");
 
         Destroy(gameObject);
+        onDead?.Invoke(); 
+        //kich hoat su kien safely
+
+        //toan tu (?.) check xem onDead co dang chua ham nao dang lang nghe khong, neu khong co script nao dc
+        //gan thi system se tuw dong bo qua
+        //Invoke(): lenh thuc thi su kien -> tat ca ham ket noi voi onDead se chay all at once
     }
 }
