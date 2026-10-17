@@ -6,13 +6,17 @@ public class Health : MonoBehaviour
 {
     public GameObject explosion_prefab;
     public int default_health_point;
-    private int health_point;
-    public System.Action onDead; //dat ten bien cho su kien
+    public int health_point;
+
+    //dat ten bien cho su kien
+    public System.Action onDead; 
+    public System.Action onHealthChange;
     
 
     private void Start()
     {
         health_point = default_health_point;
+        onHealthChange?.Invoke();
     }
 
     //take_damage method nhan vao gia tri tham chieu damage
@@ -23,6 +27,8 @@ public class Health : MonoBehaviour
             return;
 
         health_point -= damage;
+        onHealthChange?.Invoke();
+
         if (health_point <= 0)
             die();
     }
