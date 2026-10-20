@@ -10,7 +10,7 @@ public class EnemySpawner : MonoBehaviour
 
     private void Start()
     {
-        
+        spawnEnemyWaves();
     }
 
     private void spawnEnemyWaves()
@@ -24,15 +24,16 @@ public class EnemySpawner : MonoBehaviour
             var agent = enemy.GetComponent<FlypathAgent>();
             agent.flypath = waveInfo.flyPath;
             agent.flyspeed = waveInfo.speed;
-            startPosition = waveInfo.formationOffSet;
+            startPosition += waveInfo.formationOffSet;
 
         }
 
         currentWave++;
 
-        if (currentWave < enemyWaves.Length) {
+        if (currentWave < enemyWaves.Length)
+        {
             Invoke(nameof(spawnEnemyWaves), waveInfo.nextWaveDelay);
-            
-        }
 
+        }
+    }
 }

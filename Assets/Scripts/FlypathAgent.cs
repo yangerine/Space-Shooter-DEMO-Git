@@ -8,7 +8,7 @@ public class FlypathAgent : MonoBehaviour
 {
     public FlyPath flypath;
     public float flyspeed;
-    private int nextIndex = 1; //=1 vi diem [0] da duoc gan tu ham start()
+    private int nextIndex = 1; //= 1 vi diem [0] da duoc gan tu ham start()
     
 
     //start game thi gan vi tri hien tai voi diem flypath dau tien(waypoints[i])
