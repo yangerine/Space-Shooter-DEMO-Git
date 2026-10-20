@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Animations;
 
 public class FlypathAgent : MonoBehaviour
 {
@@ -25,12 +27,27 @@ public class FlypathAgent : MonoBehaviour
         {
             //fly to the next waypoint
             FlyToNextWaypoints();
+            LookAt(flypath[nextIndex]);
+            
+
         }
         else //neu vi tri hien tai dang  = diem bay
         {
             nextIndex++;
         }
 
+    }
+
+    private void LookAt(Vector2 destination)
+    {
+        Vector2 position = transform.position;
+        var lookDirection = destination - position;
+
+        //check khoang cach tu vi tri enemy den diem bay, neu qua gan thi return
+        if (lookDirection.magnitude < 0.01f) return;
+
+        var angle = Vector2.SignedAngle(Vector3.down, lookDirection);//tinh goc lech giua huong goc cura enemy va huong bay
+        transform.rotation = Quaternion.Euler(0,0,angle);//ap dung goc xoay len chuyen dong cua tau
     }
 
     private void FlyToNextWaypoints()
