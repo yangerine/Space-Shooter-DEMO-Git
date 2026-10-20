@@ -12,10 +12,8 @@ public class FlypathAgent : MonoBehaviour
     
 
     //start game thi gan vi tri hien tai voi diem flypath dau tien(waypoints[i])
-    private void Start()
-    {
-        transform.position = flypath[0];
-    }
+    //private void Start() => transform.position = flypath[0];
+    
 
     private void Update()
     {
