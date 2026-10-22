@@ -2351,21 +2351,21 @@ MonoBehaviour:
     numberOfEnemy: 10
     formationOffSet: {x: 0, y: 2, z: 0}
     flyPath: {fileID: 1805998858}
-    speed: 1
-    nextWaveDelay: 7
+    speed: 2
+    nextWaveDelay: 10
   - enemyPrefab: {fileID: 4977323905887344491, guid: 6a47ceb0f00c19e4e8603196969761df,
       type: 3}
     numberOfEnemy: 5
     formationOffSet: {x: 0, y: 2, z: 0}
     flyPath: {fileID: 1442300669}
     speed: 1
-    nextWaveDelay: 5
+    nextWaveDelay: 7
   - enemyPrefab: {fileID: 4977323905887344491, guid: 6a47ceb0f00c19e4e8603196969761df,
       type: 3}
     numberOfEnemy: 10
     formationOffSet: {x: 0, y: 2, z: 0}
     flyPath: {fileID: 1128745789}
-    speed: 1
+    speed: 2
     nextWaveDelay: 5
 --- !u!4 &1111494081
 Transform:
