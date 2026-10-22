@@ -19,7 +19,12 @@ public class FlypathAgent : MonoBehaviour
     {
         if (flypath == null) return;//check xem enemy co waypoints gan vao khong
 
-        if (nextIndex >= flypath.waypoints.Length) return; //check xem enemy bay qua het cac waypoint hay chua
+        //check xem enemy bay qua het cac waypoint hay chua
+        if (nextIndex >= flypath.waypoints.Length) 
+        {
+            Destroy(gameObject); //destroy enemy when finish path
+            return; 
+        }
 
         if (transform.position != flypath[nextIndex])//neu vi tri hien tai != diem can bay
         {
