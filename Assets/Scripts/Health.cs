@@ -51,7 +51,7 @@ public class Health : MonoBehaviour
         //kich hoat su kien safely
 
         //toan tu (?.) check xem onDead co dang chua ham nao dang lang nghe khong, neu khong co script nao dc
-        //gan thi system se tuw dong bo qua
+        //gan thi system se tu dong bo qua
         //Invoke(): lenh thuc thi su kien -> tat ca ham ket noi voi onDead se chay all at once
     }
 }

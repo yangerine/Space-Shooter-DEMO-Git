@@ -6,13 +6,15 @@ public class EnemySpawner : MonoBehaviour
 {
     public EnemyWave[] enemyWaves;
 
-    private int currentWave;
+    public int currentWave;
+
 
     private void Start()
     {
         spawnEnemyWaves();
     }
 
+    //day la de spawn enemy
     private void spawnEnemyWaves()
     {
         var waveInfo = enemyWaves[currentWave];
@@ -35,5 +37,9 @@ public class EnemySpawner : MonoBehaviour
             Invoke(nameof(spawnEnemyWaves), waveInfo.nextWaveDelay);
 
         }
+
+
     }
+
+  
 }

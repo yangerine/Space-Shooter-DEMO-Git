@@ -10,13 +10,14 @@ public class BattleFlow : MonoBehaviour
     public GameObject gameOverUI;
     public PlayerHealth playerHealth;
     public GameObject BGM;
-
     public GameObject gameWinUI;
+    public EnemySpawner enemySpawner;
 
 
     // Start is called before the first frame update
     void Start()
     {
+
         //tat man hinh game over khi game bat
         gameOverUI.SetActive(false);
         gameWinUI.SetActive(false);
@@ -28,7 +29,18 @@ public class BattleFlow : MonoBehaviour
 
     private void Update()
     {
-        if( EnemyHealth.livingEnemyCount <= 0)
+        //them dieu kien win game when survive
+        //enemy spawn het or no enemy in the main camera but the player still alive
+        //to achieve this -> enemy detection for the main screen?
+        
+        
+    }
+
+    //ham nay chua goi -> goi ham nay o dau va khi nao?
+    //check khi dang spawn?
+    public void OnEnemyDie()
+    {
+        if (EnemyHealth.livingEnemyCount <= 0)
         {
             onGameWin();
         }
