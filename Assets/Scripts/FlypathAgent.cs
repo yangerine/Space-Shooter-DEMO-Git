@@ -9,7 +9,9 @@ public class FlypathAgent : MonoBehaviour
     public FlyPath flypath;
     public float flyspeed;
     private int nextIndex = 1; //= 1 vi diem [0] da duoc gan tu ham start()
-    
+
+    public int enemyDieCount = 0;
+    public EnemySpawner spawner;
 
     //start game thi gan vi tri hien tai voi diem flypath dau tien(waypoints[i])
     //private void Start() => transform.position = flypath[0];
@@ -23,6 +25,14 @@ public class FlypathAgent : MonoBehaviour
         if (nextIndex >= flypath.waypoints.Length) 
         {
             Destroy(gameObject); //destroy enemy when finish path
+            enemyDieCount++;
+
+
+            Debug.Log("Enemy desstroyed +1");
+
+            //check neu enemyDieCount >= maxEnemy && currentWave >= enemywave.length -> onWinGame
+            
+
             return; 
         }
 

@@ -41,7 +41,7 @@ public class PlayerBullets : MonoBehaviour
         }
 
         //destroy the bullet gameobject whether the object it pass through die or not
-        //Destroy(gameObject);
+        Destroy(gameObject);
     }
 
 }

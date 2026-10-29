@@ -6,9 +6,9 @@ using UnityEngine;
 
 public class EnemyDetection : MonoBehaviour
 {
+    //problem: start game la hien man hinh win game
+
     private bool enemyInside = false;
-    public LayerMask enemyLayer;
-    private Collider2D rbcollider;
 
     //private void OnTriggerStay2D(Collider2D collision) //collision nay can sua lai 
     //{
@@ -23,14 +23,6 @@ public class EnemyDetection : MonoBehaviour
     //    }
     //}
 
-    private void Update()
-    {
-        var isInside = Physics2D.IsTouchingLayers(rbcollider, enemyLayer);
-
-        if (isInside)
-        {
-            Debug.Log("Enemies is still inside the screen");
-        }
-    }
+    
 
 }

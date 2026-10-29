@@ -167,7 +167,8 @@ MonoBehaviour:
   explosion_prefab: {fileID: 1280240331523082, guid: 45ae5851ef2832044bba82850372d67b,
     type: 3}
   default_health_point: 3
-  health_point: 0
+  health_point: 3
+  battleFlow: {fileID: 0}
 --- !u!114 &6340758845792826292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,6 +197,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flypath: {fileID: 0}
   flyspeed: 0
+  enemyDieCount: 0
+  spawner: {fileID: 0}
 --- !u!1 &990213383216929601
 GameObject:
   m_ObjectHideFlags: 0

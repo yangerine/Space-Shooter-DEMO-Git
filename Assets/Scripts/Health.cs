@@ -34,9 +34,11 @@ public class Health : MonoBehaviour
     }
 
     //detects when a game object enters the enemy's collider
+    //problem o day
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        die();
+        take_damage(1);
+
     }
 
     //add virtual so the children of this class can override it and add custom method to it while keeping the core function
