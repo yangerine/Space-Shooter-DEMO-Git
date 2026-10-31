@@ -9,8 +9,8 @@ public class EnemySpawner : MonoBehaviour
     public EnemyWave[] enemyWaves;
 
     public int currentWave;
-    private int enemyNumcount = 0;
-    public int maxEnemy = 0;
+    public int enemyNumcount = 0;
+    public int maxEnemy = 25;
     public bool waveEnd = false;
 
 
@@ -38,13 +38,8 @@ public class EnemySpawner : MonoBehaviour
             agent.flyspeed = waveInfo.speed;
             startPosition += waveInfo.formationOffSet;
 
-            enemyNumcount++;
             Debug.Log("Enemy Count +1");
 
-            //if ( >= spawner.maxEnemy && spawner.waveEnd == true)
-            //{
-
-            //}
         }
 
         currentWave++;
@@ -55,23 +50,16 @@ public class EnemySpawner : MonoBehaviour
 
         }
 
-        maxEnemy = EnemyNum * enemyWaves.Length;
-
         
 
     }
 
     private void Update()
     {
-
-
         if (currentWave >= enemyWaves.Length)
         {
             waveEnd = true;
         }
-
-
-       
     }
 
 

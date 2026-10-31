@@ -7,6 +7,7 @@ public class EnemyHealth : Health
 {
     public static int livingEnemyCount;
     public BattleFlow battleFlow;
+    public int enemyDestroyed = 0;
 
 
     private void Awake()
@@ -23,8 +24,9 @@ public class EnemyHealth : Health
 
         livingEnemyCount--;
         base.die();
-        battleFlow.OnEnemyDie();
+        //battleFlow.OnEnemyDie();
         Debug.Log("An Enemy was hit!");
+        enemyDestroyed++;
 
     }
 

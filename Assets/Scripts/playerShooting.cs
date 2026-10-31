@@ -38,6 +38,7 @@ public class playerShooting : MonoBehaviour
     private void shoot()
     {
         var newBulletPrefab = Instantiate(bulletPrefab, transform.position + bullet_offset, transform.rotation);
-        Destroy(newBulletPrefab, 5f);
+
+        Destroy(newBulletPrefab, 10f);
     }
 }

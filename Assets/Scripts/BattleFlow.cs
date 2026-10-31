@@ -12,6 +12,7 @@ public class BattleFlow : MonoBehaviour
     public GameObject BGM;
     public GameObject gameWinUI;
     public EnemySpawner enemySpawner;
+    public EnemyHealth enemyHealth;
 
 
     // Start is called before the first frame update
@@ -29,15 +30,13 @@ public class BattleFlow : MonoBehaviour
 
     private void Update()
     {
-        //them dieu kien win game when survive
-        //enemy spawn het or no enemy in the main camera but the player still alive
-        //to achieve this -> enemy detection for the main screen?
-        
-        
+        if(enemySpawner.waveEnd == true && enemySpawner.maxEnemy == enemyHealth.enemyDestroyed)
+        {
+            OnEnemyDie();
+        }
     }
 
-    //ham nay chua goi -> goi ham nay o dau va khi nao?
-    //check khi dang spawn?
+
     public void OnEnemyDie()
     {
         if (EnemyHealth.livingEnemyCount <= 0)
